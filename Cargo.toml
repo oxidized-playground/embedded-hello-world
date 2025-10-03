@@ -1,0 +1,16 @@
+[package]
+name    = "embedded-hello-world"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+cfg-if = "1.0.0"
+esp-backtrace = { git = "https://github.com/esp-rs/esp-hal.git", rev = "acf3327fa3fd21205ddd1bc3be2cfce5de0d8020" ,features = [
+    "panic-handler",
+    "println",
+    "esp32",
+] }
+esp-bootloader-esp-idf = { git = "https://github.com/esp-rs/esp-hal.git", rev = "acf3327fa3fd21205ddd1bc3be2cfce5de0d8020", features = ["esp32"] }
+esp-hal = { git = "https://github.com/esp-rs/esp-hal.git", rev = "acf3327fa3fd21205ddd1bc3be2cfce5de0d8020", features = ["defmt", "unstable", "esp32"] }
+esp-println = { git = "https://github.com/esp-rs/esp-hal.git", rev = "acf3327fa3fd21205ddd1bc3be2cfce5de0d8020", features = ["defmt-espflash", "esp32"] }
